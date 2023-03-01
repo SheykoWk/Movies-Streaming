@@ -35,9 +35,16 @@ app.get('/', (req, res) => {
     })
 })
 
+app.get('/query', (req, res) => {
+    res.status(200).json({
+        myQueryGenre: req.query.genre, 
+        queries: req.query
+    })
+})
+
 //? Ruta de ejemplo para subir imagenes
-app.post('/upload-file',upload.single('myImage') , (req, res) => {
-    const file = req.file
+app.post('/upload-file',upload.fields([{name: 'coverImage', maxCount: 1}, {name: 'movieVideo', maxCount: 1}]), (req, res) => {
+    const file = req.files
     res.status(200).json({file})
 })
 
