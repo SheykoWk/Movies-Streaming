@@ -24,4 +24,6 @@ const addToFirebaseMovieVideo = async (file) => {
 
 
 
-
+module.exports = {
+    addToFirebaseMovieVideo
+}
