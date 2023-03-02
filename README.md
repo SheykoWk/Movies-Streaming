@@ -8,3 +8,4 @@
 
 
 POST /movies/:movie_id/genre/:genre_id
+({movieId, genreId})
