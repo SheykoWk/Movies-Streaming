@@ -16,6 +16,26 @@
                     }
                 }
             }
+        },
+        "/api/v1/movies/{movieId}": {
+            "get": {
+                "parameters": [
+                    {
+                        "name": "movieId",
+                        "in": "path",
+                        "type": "string",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Obtener todos mis usuarios"
+                    },
+                    "400": {
+                        "description": "Ocurrio un error al intentar obtener todos los usuarios"
+                    }
+                }
+            }
         }
     }
 }
